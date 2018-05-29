@@ -1,0 +1,6 @@
+CREATE TABLE `tamerlan`.`questions` ( `id` INT NOT NULL AUTO_INCREMENT , `name`
+TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , `email`
+TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , `title`
+TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , `description`
+ TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL , `created_at`
+  DATE NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

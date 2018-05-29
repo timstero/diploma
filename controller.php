@@ -17,7 +17,7 @@ class BaseController
 	{
 		/*SQL Credentials*/
 		$this->user ='root';
-		$this->database ='diplom';
+		$this->database ='tamerlan';
 		$this->host= 'localhost';
 		$this->password = 'root';
 		$this->mysql = $this->dataBaseConnect();
@@ -47,16 +47,19 @@ class BaseController
 	/*
 	* Insert into table `users` data 
 	*/
-	public function setUserFromData($name, $email, $pass)
+	public function setFromData($name, $email, $title, $text)
 	{
-		$statement = $this->mysql->prepare("INSERT INTO users(name, email, password)
-   						 VALUES(:name, :email, :password)");
+		$statement = $this->mysql->prepare("INSERT INTO questions(name, email, title, description, created_at)
+   						 VALUES(:name, :email, :title, :description, :created_at)");
 
 		$statement->execute([
     					"name" => $name,
     					"email" =>  $email,
-    					"password" => $pass
-    	]);
+    					"title" => $title,
+    					"description" => $text,
+    					"title" => $title,
+                        "created_at" => date("Y-m-d H:i:s")
+        ]);
 
 	}
 
@@ -66,10 +69,8 @@ class BaseController
 
 $DataController = new BaseController();
 
-
-
-	$DataController->setUserFromData($_POST['name'], $_POST['email'], $_POST['password']);
-	echo 'Hello '. $_POST['name']. $_POST['email'] .$_POST['password'].'!';
+$DataController->setFromData($_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message']);
+echo 'Your question has been sent';
 
 
 
