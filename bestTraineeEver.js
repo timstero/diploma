@@ -3,7 +3,7 @@
 $(function() {
 
 
-$('#userForm .tamerlan').click(function(e){
+$('#contact-form .tamerlan').click(function(e){
 	e.preventDefault();
 	var $data;
 
@@ -14,6 +14,8 @@ $('#userForm .tamerlan').click(function(e){
 		type: 'POST',
 		data: $data,
 		 success: function(result) {
+            $('#form_result').attr('class', 'alert alert-success');
+         	$('#form_result').html(result);
 		 	console.log(result);
 		 }	
 	})

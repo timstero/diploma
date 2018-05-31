@@ -684,33 +684,17 @@
                         </address>
                     </div>
                     <div class="col-xs-12 col-md-8">
-
-<form  action="./controller.php" id="userForm">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Your Name</label>
-                <input type="text" name="name" class="form-control"  placeholder="Enter name">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-              <button type="submit"  class="btn tamerlan btn-primary">Submit</button>
-            </form>
-
-                        <form action="process.php" id="contact-form" method="post" class="contact-form">
-                            <div class="form-double">
-                                <input type="text" id="form-name" name="name" placeholder="Ваше Имя" class="form-control" required="required">
-                                <input type="email" id="form-email" name="email" class="form-control" placeholder="Ваш E-mail" required="required">
-                            </div>
-                            <input type="text" id="form-subject" name="subject" class="form-control" placeholder="Тема вопроса">
-                            <textarea name="message" id="form-message" name="message" rows="5" class="form-control" placeholder="Введите ваше сообщение ..." required="required"></textarea>
-                            <button type="sibmit" class="button">Отправить</button>
-                        </form>
+                    <form action="./controller.php" id="contact-form" method="POST" class="contact-form">
+                        <div class="form-double">
+                            <input type="text" id="form-name" name="name" placeholder="Ваше Имя" class="form-control" required="required">
+                            <input type="email" id="form-email" name="email" class="form-control" placeholder="Ваш E-mail" required="required">
+                        </div>
+                        <input type="text" id="form-subject" name="subject" class="form-control" placeholder="Тема вопроса">
+                        <textarea name="message" id="form-message" name="message" rows="5" class="form-control"
+                                  placeholder="Введите ваше сообщение ..." required="required"></textarea>
+                        <button type="submit" class="button tamerlan">Отправить</button>
+                        <div id="form_result" class=""></div>
+                    </form>
                     </div>
                 </div>
             </div>
