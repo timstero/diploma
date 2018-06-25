@@ -17,7 +17,7 @@ class BaseController
 	{
 		/*SQL Credentials*/
 		$this->user ='root';
-		$this->database ='tamerlan';
+		$this->database ='diplom';
 		$this->host= 'localhost';
 		$this->password = 'root';
 		$this->mysql = $this->dataBaseConnect();
